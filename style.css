@@ -52,6 +52,9 @@ body {
   border-radius: var(--circle);
   z-index: 1;
 }
+.ear-left .active {
+  animation: 3s 10 spinMe;
+}
 
 .ear-right {
   position: absolute;
@@ -62,6 +65,9 @@ body {
   background-color: var(--head-color);
   border-radius: var(--circle);
   z-index: 1;
+}
+.active {
+  animation: 3s 10 spinMe;
 }
 .inner-ear {
   position: absolute;
@@ -111,6 +117,9 @@ body {
   border-radius: var(--rounded-rectangle);
   z-index: 4;
 }
+.clicked {
+  background-color: green;
+}
 .hair-left {
   position: absolute;
   top: -8%;
@@ -130,4 +139,16 @@ body {
   background: var(--head-color);
   -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: var(--triangle);
+}
+@keyframes spinMe {
+  0% {
+    background: var(--head-color);
+  }
+  50% {
+    background: pink;
+    transform: scale(1.25);
+  }
+  100% {
+    background: var(--head-color);
+  }
 }
